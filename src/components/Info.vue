@@ -6,6 +6,24 @@
         <p class="display-1 font-weight-light">Autoridades</p>
     </div>
     <div id="info" class="container">                
+        
+        <v-card
+            class="mx-auto mb-5"
+            max-width="344"
+        >
+            <v-card-text>
+             
+            <p class="display-1 text--primary">
+               VICERRECTORADO ACADÉMICO
+            </p>
+             
+            <div class="text--primary">
+                Dra. Perla Magnolia Vásquez Da Silva
+            </div>
+            </v-card-text>
+        </v-card>
+
+
         <v-card
             class="mx-auto mb-5"
             max-width="344"             
@@ -14,7 +32,7 @@
             <v-card-text>
              
             <p class="display-1 text--primary">
-                RECTOR ACADEMICO
+                RECTOR
             </p>
              
             <div class="text--primary">
@@ -24,21 +42,6 @@
             </v-card-text>
         </v-card>
 
-        <v-card
-            class="mx-auto mb-5"
-            max-width="344"
-        >
-            <v-card-text>
-             
-            <p class="display-1 text--primary">
-               VICERRECTORADO ACADEMICO
-            </p>
-             
-            <div class="text--primary">
-                Dra. Perla Magnolia Vásquez da Silva
-            </div>
-            </v-card-text>
-        </v-card>
 
 
         <v-card
@@ -48,7 +51,7 @@
             <v-card-text>
              
             <p class="display-1 text--primary">
-                VICERRECTORADO DE INVESTIGACION
+                VICERRECTORADO DE INVESTIGACIÓN
             </p>
             
             <div class="text--primary">
@@ -63,7 +66,26 @@
         <p class="display-1 font-weight-light">Responsables</p>
     </div>
     <div id="info" class="container">                
+
+
         <v-card
+            class="mx-auto mb-5"
+            max-width="344"
+        >
+            <v-card-text>
+             
+            <p class="display-1 text--primary">
+               Estudiante Responsable
+            </p>
+             
+            <div class="text--primary">
+                Tairon Willer Gomez Isuiza
+            </div>
+            </v-card-text>
+        </v-card>
+
+
+                <v-card
             class="mx-auto mb-5"
             max-width="344"             
             
@@ -88,24 +110,7 @@
             <v-card-text>
              
             <p class="display-1 text--primary">
-               Alumno Responsable
-            </p>
-             
-            <div class="text--primary">
-                Tairon Willer Gomez Isuiza
-            </div>
-            </v-card-text>
-        </v-card>
-
-
-        <v-card
-            class="mx-auto mb-5"
-            max-width="344"
-        >
-            <v-card-text>
-             
-            <p class="display-1 text--primary">
-                Alumno Responsable
+                Estudiante Responsable
             </p>
             
             <div class="text--primary">

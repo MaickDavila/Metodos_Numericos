@@ -9,9 +9,16 @@
         <v-btn text> 
             <img src="img/fisi.png" alt="">
         </v-btn>
+        
         <v-btn text>
             <img src="img/unap.svg" alt="">
-        </v-btn>         
+        </v-btn>    
+
+        <v-btn href="docs/manual.pdf" target="_blank" text color="white">            
+            Ayuda
+        </v-btn>    
+
+
       </v-toolbar-items>
 
     </v-toolbar>    

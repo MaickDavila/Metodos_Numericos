@@ -5,8 +5,8 @@
             <div class="align-center flex flex-column align-self-center" style="text-align:center;">
                 <div>
                     <p class="font-weight-light display-1 text-center pt-10" style="text-align:justify; font-size:1.5rem;"
-                        >Esta seccion estima la población futura del distrito de <b>Nauta</b>
-                    <br> Tomando en cuenta los censos nacionales del 1993, 2007 y 2017.  </p>
+                        >Esta sección estima la población futura del distrito de <b>Nauta</b>
+                    <br> tomando en cuenta los censos nacionales del 1993, 2007 y 2017.  </p>
                 </div>
             </div>
 

@@ -5,8 +5,8 @@
             <div class="align-center flex flex-column align-self-center" style="text-align:center;">
                 <div>
                     <p class="font-weight-light" style="text-align:justify; font-size:1.5rem;"
-                        >Esta seccion estima la población futura de poblaciones <b>pequeñas</b>
-                     <br> Tomando en cuenta los censos nacionales del 1993, 2007 y 2017.</p>
+                        >Esta sección estima la población futura de poblaciones <b>pequeñas</b>
+                     <br> tomando en cuenta los censos nacionales del 1993, 2007 y 2017.</p>
                 </div>
             </div>
 
@@ -20,6 +20,7 @@
 
                                 <v-col cols="12" sm="6" md="3">
                                 <v-text-field
+                                    type="number"
                                     v-model="poblacion1"
                                     label="1993"
                                     aria-required
@@ -28,6 +29,7 @@
 
                                 <v-col cols="12" sm="6" md="3">
                                 <v-text-field
+                                type="number"
                                     v-model="poblacion2"
                                     label="2007"
                                 ></v-text-field>
@@ -35,6 +37,7 @@
 
                                 <v-col cols="12" sm="6" md="3">
                                 <v-text-field
+                                type="number"
                                     v-model="poblacion3"
                                     label="2017"
                                 ></v-text-field>
@@ -64,7 +67,7 @@
 
 
                 <section class="py-5">
-                    <Dashboard_Otros :anio_in="select" :poblacion1="poblacion1" :poblacion2="poblacion2" :poblacion3="poblacion3"/>
+                    <Dashboard_Otros :anio_in="select" :poblacion1="poblacion1" :poblacion2="poblacion2" :poblacion3="poblacion3" @Limpiar="Limpiar"/>
                 </section>
             </div>
         </div>
@@ -79,9 +82,9 @@ import Dashboard_Otros from './Dashboard_Otros';
     name:'Otros',
     data () {
         return {
-            poblacion1:'',
-            poblacion2:'',
-            poblacion3:'',
+            poblacion1:null,
+            poblacion2:null,
+            poblacion3:null,
             select: { state: '2019', abbr: '2019' },
             items: [                
             ],
@@ -94,9 +97,17 @@ import Dashboard_Otros from './Dashboard_Otros';
                 this.items.push(i,i);               
             }
         },
+        Limpiar(){
+            this.poblacion1 = null;
+            this.poblacion2 = null;
+            this.poblacion3 = null;
+            this.select = { state: '2019', abbr: '2019' };
+        },
+        
     },
     mounted(){
         this.Anios()
+       
     },
     components:{
         Dashboard_Otros

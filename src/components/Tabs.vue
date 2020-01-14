@@ -21,7 +21,7 @@
 
       <v-tab href="#tab-3">
         Otros
-        <v-icon>mdi-pencil</v-icon>
+        <v-icon>mdi-pencil</v-icon>        
       </v-tab>
     </v-tabs>
 

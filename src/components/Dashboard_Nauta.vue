@@ -24,7 +24,7 @@
     <v-sparkline
     :labels="labels"
     :value="value"
-    color="white"
+    color="black"
     line-width="2"
     padding="16"
     >
@@ -35,7 +35,7 @@
 
     <v-card-text class="p-0">
       <div class="title font-weight-light mb-2">Resultado hasta el año <b>{{anio_in}}</b></div>
-      <div class="display-1 subheading font-weight-light grey--text"><b>{{value[value.length-1]}}</b></div>
+      <div class="display-1 subheading font-weight-light grey--text"><b>{{value[value.length-1]}} habitantes</b></div>
       
     </v-card-text>
     </v-card>
@@ -75,8 +75,8 @@ import { log, isNull } from 'util';
               } catch (error) {
                 console.log("error: " + error);                
                 return 0;
-              }
-              return Y;
+              }              
+              return Math.round(Y);
         },
         LimpiarEvent(){          
           this.value.length = 0;

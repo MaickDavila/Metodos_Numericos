@@ -4,7 +4,7 @@
   <template>
             <div class="text-center">
                 <v-btn class="ma-2" tile color="indigo" dark @click="Llenar">Calcular</v-btn>
-                <v-btn class="ma-2" tile outlined color="error" @click="LimpiarEvent">
+                <v-btn class="ma-2" tile outlined color="error" @click="Limpiar2">
                 <v-icon left>mdi-delete</v-icon> Limpiar
                 </v-btn>
             </div>
@@ -24,7 +24,7 @@
     <v-sparkline
     :labels="labels"
     :value="value"
-    color="white"
+    color="black"
     line-width="2"
     padding="16"
     >
@@ -35,7 +35,7 @@
 
     <v-card-text class="p-0">
       <div class="title font-weight-light mb-2">Resultado hasta el año <b>{{anio_in}}</b></div>
-      <div class="display-1 subheading font-weight-light grey--text"><b>{{value[value.length-1]}}</b></div>
+      <div class="display-1 subheading font-weight-light grey--text"><b>{{value[value.length-1]}} habitantes</b></div>
       
     </v-card-text>
     </v-card>
@@ -82,8 +82,8 @@ import { log } from 'util';
               console.log("recivo el A:> " + A);
               console.log("recivo el B:> " + B);
               console.log("recivo el T:> " + T);
-              console.log("SOY LA Y:> " + Y);
-              return Y;
+              console.log("SOY LA Y:> " + Y);              
+              return Math.round(Y);
         },
         Ecuacion2(T){
           let B,A,Y;
@@ -96,7 +96,7 @@ import { log } from 'util';
                 return 0;
               }
               
-              return Y;
+              return Math.round(Y);
         },
         LimpiarEvent(){          
          try {
@@ -111,11 +111,17 @@ import { log } from 'util';
           this.value.push(parseFloat(this.poblacion2));
           this.value.push(parseFloat(this.poblacion3));
 
-          this.mostrar = false
+          this.mostrar = false;    
+         
+
          } catch (error) {
            
-         }
+         }         
         },
+        Limpiar2(){
+            this.$emit("Limpiar");
+            this.LimpiarEvent();
+         },
         Llenar(){    
           let r1, r2;
 
